@@ -200,7 +200,7 @@ SCIDOCS & Citation & 25{,}657 & 1{,}000 & 4.9 \\
 
 \begin{table}[t]
 \centering\small
-\caption{nDCG@10 with 95\% bootstrap CI. \textbf{Bold} = best per column. $\dagger$ = 95\% CI of diff vs Cross-Enc excludes 0. $\ddagger$ = JKO and KL-Prox are within CI of each other (effectively tied).}
+\caption{nDCG@10 with 95\% bootstrap CI. \textbf{Bold} = best per column. $\dagger$ = 95\% CI of diff vs Cross-Enc excludes 0 (TREC-COVID CI lower bound ${\approx}0.000$, borderline; $n{=}50$ queries). $\ddagger$ = JKO and KL-Prox are within CI of each other (effectively tied).}
 \label{tab:main}
 \setlength\tabcolsep{4pt}
 \begin{tabular}{@{}lcccccc@{}}
@@ -216,7 +216,7 @@ DPP-MAP     & 0.692 & 0.327 & ---   & 0.375 & ---   \\
 Iter-RetGen & 0.677 & ---   & ---   & ---   & ---   \\
 KL-Prox     & 0.712 & 0.357 & 0.717 & \textbf{0.413}$^\ddagger$ & \textbf{0.197}$^\ddagger$ \\
 \midrule
-\jko\ (ours)  & \textbf{0.713}$^\dagger$ & \textbf{0.359}$^\dagger$ & \textbf{0.726}$^\dagger$ & 0.411$^{\dagger\ddagger}$ & 0.196$^{\dagger\ddagger}$ \\
+\jko\ (ours)  & \textbf{0.713}$^\dagger$ & \textbf{0.359}$^\dagger$ & \textbf{0.725}$^\dagger$ & 0.411$^{\dagger\ddagger}$ & 0.196$^{\dagger\ddagger}$ \\
 \quad vs Cross-Enc & +0.029 & +0.007 & +0.038 & +0.043 & +0.029 \\
 \quad 95\% CI  & [\!+.015,+.043\!] & [\!+.001,+.013\!] & [\!+.000,+.079\!] & [\!+.034,+.053\!] & [\!+.024,+.034\!] \\
 \bottomrule
@@ -230,7 +230,7 @@ We apply three lexical perturbations to each query (drop a stopword; append a he
 
 \begin{table}[h]
 \centering\small
-\caption{Mean $\protect\mWdist$ under paraphrase (lower = more stable).}
+\caption{Mean $\protect\mWdist$ under paraphrase (lower = more stable). All methods run with base config ($h{=}0.5$, $T{=}3$) and rerank-only energy ($\alpha_e{=}0$, $\gamma_e{=}1$) to ensure a config-neutral head-to-head.}
 \label{tab:stability}
 \begin{tabular}{@{}lcccc@{}}
 \toprule
@@ -255,7 +255,7 @@ We inject $N$ hard near-duplicate distractors (nearest-neighbours of gold docs n
 
 \begin{table}[h]
 \centering\small
-\caption{Distractor leakage (lower = better). SciFact, n=150 queries.}
+\caption{Distractor leakage (lower = better). SciFact, $n{=}150$ queries, base config ($h{=}0.5$, $T{=}3$), rerank-only energy.}
 \label{tab:distractors}
 \begin{tabular}{@{}lcccc@{}}
 \toprule
@@ -292,7 +292,7 @@ MR-JKO (k-means)   & 0.641 & 487 & $1.95\times$ \\
 
 \subsection{\dualrank: selective coverage}
 
-\Cref{fig:main}b shows selective coverage curves for four datasets. The dual-potential confidence $\mathrm{conf}(q)$ (\Cref{eq:conf}) exhibits rising nDCG@10 as coverage shrinks, confirming it is an informative abstention signal. On NFCorpus at 10\% coverage, \dualrank\ achieves nDCG@10 of 0.541 vs.\ 0.359 at full coverage ($+50\%$ relative gain). The dual signal outperforms the softmax-max and probability-margin baselines on NFCorpus and SCIDOCS (harder, multi-relevant datasets), demonstrating that geometric OT duals carry retrieval-confidence information not available from raw scores.
+\Cref{fig:main}b shows selective coverage curves for four datasets. The dual-potential confidence $\mathrm{conf}(q)$ (\Cref{eq:conf}) exhibits rising nDCG@10 as coverage shrinks, confirming it is an informative abstention signal. On NFCorpus at 10\% coverage, \dualrank\ achieves nDCG@10 of 0.541 vs.\ 0.359 at full coverage ($+50\%$ relative gain). The dual signal outperforms the softmax-max and probability-margin baselines on NFCorpus and SCIDOCS (harder, multi-relevant datasets), demonstrating that geometric OT duals carry retrieval-confidence information not available from raw scores.\footnote{The \dualrank\ selective experiment uses energy weights $\alpha_e{=}0.4$, $\gamma_e{=}0.6$ (blend of dense + rerank), whereas the tuned main-table config uses $\gamma_e{=}0.3$. We retain the shallower rerank weight here to isolate the dual-potential signal; relative orderings between confidence strategies are unaffected.}
 
 \subsection{Ablation: what does the semantic geometry do?}
 

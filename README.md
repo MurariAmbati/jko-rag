@@ -38,7 +38,9 @@ and $C_{ij} = (1 - \cos\langle z_i, z_j\rangle)^2$ is the semantic ground metric
 |--------|---------|----------|------------|------|---------|
 | Cross-Encoder | 0.684 | 0.352 | 0.687 | 0.368 | 0.167 |
 | KL-Proximal | 0.712 | 0.357 | 0.717 | 0.413 | 0.197 |
-| **JKO-RAG (ours)** | **0.713** | **0.359** | **0.725** | **0.411** | **0.196** |
+| **JKO-RAG (ours)** | **0.713** | **0.359** | **0.725**† | **0.411** | **0.196** |
+
+> † TREC-COVID: JKO improvement over Cross-Encoder is borderline significant (paired 95% CI lower bound ≈ 0.000; n=50 queries). FiQA and SCIDOCS: JKO and KL-Proximal are within bootstrap CI of each other (effectively tied; KL scores marginally higher by 0.001–0.002).
 
 ### Stability under paraphrase (W_C, lower = more stable)
 
