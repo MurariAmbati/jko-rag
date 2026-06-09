@@ -1,0 +1,6170 @@
+{
+  "n_queries": 200,
+  "k_evidence": 3,
+  "config": {
+    "h": 2.0,
+    "lam": 0.1,
+    "rho": 0.05,
+    "sinkhorn_eps": 0.2,
+    "T": 5,
+    "inner_steps": 40,
+    "tau0": 1.0,
+    "alpha": 0.4,
+    "gamma": 0.3,
+    "mode": "wasserstein"
+  },
+  "label_distribution": {
+    "SUPPORT": 83,
+    "CONTRADICT": 44,
+    "NEI": 73
+  },
+  "results": {
+    "rerank": {
+      "accuracy": {
+        "mean": 0.43,
+        "ci_lo": 0.365,
+        "ci_hi": 0.5,
+        "n": 200
+      },
+      "per_class": {
+        "SUPPORT": {
+          "acc": 0.6746987951807228,
+          "n": 83
+        },
+        "CONTRADICT": {
+          "acc": 0.6818181818181818,
+          "n": 44
+        },
+        "NEI": {
+          "acc": 0.0,
+          "n": 73
+        }
+      },
+      "confusion": {
+        "SUPPORT": {
+          "CONTRADICT": 27,
+          "SUPPORT": 56
+        },
+        "CONTRADICT": {
+          "SUPPORT": 14,
+          "CONTRADICT": 30
+        },
+        "NEI": {
+          "CONTRADICT": 42,
+          "SUPPORT": 31
+        }
+      },
+      "per_query_correct": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "kl_blend": {
+      "accuracy": {
+        "mean": 0.44,
+        "ci_lo": 0.375,
+        "ci_hi": 0.51,
+        "n": 200
+      },
+      "per_class": {
+        "SUPPORT": {
+          "acc": 0.6746987951807228,
+          "n": 83
+        },
+        "CONTRADICT": {
+          "acc": 0.7272727272727273,
+          "n": 44
+        },
+        "NEI": {
+          "acc": 0.0,
+          "n": 73
+        }
+      },
+      "confusion": {
+        "SUPPORT": {
+          "CONTRADICT": 27,
+          "SUPPORT": 56
+        },
+        "CONTRADICT": {
+          "SUPPORT": 12,
+          "CONTRADICT": 32
+        },
+        "NEI": {
+          "CONTRADICT": 44,
+          "SUPPORT": 29
+        }
+      },
+      "per_query_correct": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "jko_blend": {
+      "accuracy": {
+        "mean": 0.44,
+        "ci_lo": 0.375,
+        "ci_hi": 0.51,
+        "n": 200
+      },
+      "per_class": {
+        "SUPPORT": {
+          "acc": 0.6867469879518072,
+          "n": 83
+        },
+        "CONTRADICT": {
+          "acc": 0.7045454545454546,
+          "n": 44
+        },
+        "NEI": {
+          "acc": 0.0,
+          "n": 73
+        }
+      },
+      "confusion": {
+        "SUPPORT": {
+          "CONTRADICT": 26,
+          "SUPPORT": 57
+        },
+        "CONTRADICT": {
+          "SUPPORT": 13,
+          "CONTRADICT": 31
+        },
+        "NEI": {
+          "CONTRADICT": 43,
+          "SUPPORT": 30
+        }
+      },
+      "per_query_correct": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  },
+  "paired": {
+    "jko_blend_vs_kl_blend": {
+      "diff": 0.0,
+      "ci_lo": -0.02,
+      "ci_hi": 0.02
+    },
+    "jko_blend_vs_rerank": {
+      "diff": 0.01,
+      "ci_lo": -0.025,
+      "ci_hi": 0.04
+    },
+    "kl_blend_vs_rerank": {
+      "diff": 0.01,
+      "ci_lo": -0.02,
+      "ci_hi": 0.04
+    }
+  },
+  "predictions": {
+    "rerank": {
+      "9": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "22": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "28": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "34": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "35": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "37": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "61": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "63": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "64": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "73": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "74": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "76": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "79": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "80": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "95": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "108": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "120": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "126": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "144": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "160": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "161": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "165": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "168": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "175": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "181": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "184": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "201": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "211": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "214": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "221": {
+        "raw": "Yes",
+        "label": "SUPPORT"
+      },
+      "224": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "241": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "243": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "256": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "267": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "283": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "301": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "304": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "305": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "332": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "339": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "342": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "351": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "361": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "363": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "365": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "377": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "379": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "381": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "382": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "394": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "404": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "406": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "417": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "420": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "432": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "434": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "435": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "456": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "463": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "470": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "472": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "473": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "481": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "485": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "490": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "505": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "509": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "524": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "526": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "529": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "530": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "541": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "545": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "547": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "553": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "555": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "557": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "562": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "565": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "568": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "572": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "574": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "580": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "588": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "594": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "603": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "614": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "616": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "622": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "655": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "662": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "663": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "669": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "670": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "671": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "672": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "673": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "679": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "687": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "688": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "698": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "709": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "710": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "726": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "737": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "745": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "751": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "752": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "764": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "765": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "766": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "767": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "771": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "779": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "787": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "790": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "792": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "801": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "810": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "815": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "816": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "817": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "822": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "826": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "838": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "841": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "846": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "853": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "867": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "877": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "881": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "890": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "891": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "893": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "917": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "928": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "933": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "945": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "954": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "959": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "965": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "972": {
+        "raw": "true",
+        "label": "SUPPORT"
+      },
+      "973": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "977": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "984": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "988": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "989": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "990": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "994": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "997": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1000": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1009": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1015": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1023": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1040": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "1042": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1043": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1046": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1069": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1070": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1072": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1073": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "1085": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1097": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1105": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1106": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1111": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1119": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1138": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1161": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1173": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1190": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "1211": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1227": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1230": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1231": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1235": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1246": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "1260": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1265": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "1275": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1276": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1284": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1291": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1295": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1314": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1328": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1333": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1340": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1341": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1342": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1345": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1347": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1350": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1355": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1364": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "1374": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1376": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "1402": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      }
+    },
+    "kl_blend": {
+      "9": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "22": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "28": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "34": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "35": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "37": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "61": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "63": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "64": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "73": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "74": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "76": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "79": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "80": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "95": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "108": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "120": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "126": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "144": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "160": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "161": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "165": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "168": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "175": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "181": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "184": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "201": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "211": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "214": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "221": {
+        "raw": "Yes",
+        "label": "SUPPORT"
+      },
+      "224": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "241": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "243": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "256": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "267": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "283": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "301": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "304": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "305": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "332": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "339": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "342": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "351": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "361": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "363": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "365": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "377": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "379": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "381": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "382": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "394": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "404": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "406": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "417": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "420": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "432": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "434": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "435": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "456": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "463": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "470": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "472": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "473": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "481": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "485": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "490": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "505": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "509": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "524": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "526": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "529": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "530": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "541": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "545": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "547": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "553": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "555": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "557": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "562": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "565": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "568": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "572": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "574": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "580": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "588": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "594": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "603": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "614": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "616": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "622": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "655": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "662": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "663": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "669": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "670": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "671": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "672": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "673": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "679": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "687": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "688": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "698": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "709": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "710": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "726": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "737": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "745": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "751": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "752": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "764": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "765": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "766": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "767": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "771": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "779": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "787": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "790": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "792": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "801": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "810": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "815": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "816": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "817": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "822": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "826": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "838": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "841": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "846": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "853": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "867": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "877": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "881": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "890": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "891": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "893": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "917": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "928": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "933": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "945": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "954": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "959": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "965": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "972": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "973": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "977": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "984": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "988": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "989": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "990": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "994": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "997": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1000": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1009": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1015": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1023": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1040": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "1042": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1043": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1046": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1069": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1070": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1072": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1073": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "1085": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1097": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1105": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1106": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1111": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1119": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1138": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1161": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1173": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1190": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1211": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1227": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1230": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1231": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1235": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1246": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "1260": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1265": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1275": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1276": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1284": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1291": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1295": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1314": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1328": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1333": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1340": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1341": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1342": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1345": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1347": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1350": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1355": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1364": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "1374": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1376": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "1402": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      }
+    },
+    "jko_blend": {
+      "9": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "22": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "28": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "34": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "35": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "37": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "61": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "63": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "64": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "73": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "74": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "76": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "79": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "80": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "95": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "108": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "120": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "126": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "144": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "160": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "161": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "165": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "168": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "175": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "181": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "184": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "201": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "211": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "214": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "221": {
+        "raw": "Yes",
+        "label": "SUPPORT"
+      },
+      "224": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "241": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "243": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "256": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "267": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "283": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "301": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "304": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "305": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "332": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "339": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "342": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "351": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "361": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "363": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "365": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "377": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "379": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "381": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "382": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "394": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "404": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "406": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "417": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "420": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "432": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "434": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "435": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "456": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "463": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "470": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "472": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "473": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "481": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "485": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "490": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "505": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "509": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "524": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "526": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "529": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "530": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "541": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "545": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "547": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "553": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "555": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "557": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "562": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "565": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "568": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "572": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "574": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "580": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "588": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "594": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "603": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "614": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "616": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "622": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "655": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "662": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "663": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "669": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "670": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "671": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "672": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "673": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "679": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "687": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "688": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "698": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "709": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "710": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "726": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "737": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "745": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "751": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "752": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "764": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "765": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "766": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "767": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "771": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "779": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "787": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "790": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "792": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "801": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "810": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "815": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "816": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "817": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "822": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "826": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "838": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "841": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "846": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "853": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "867": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "877": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "881": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "890": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "891": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "893": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "917": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "928": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "933": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "945": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "954": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "959": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "965": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "972": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "973": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "977": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "984": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "988": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "989": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "990": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "994": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "997": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1000": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1009": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1015": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1023": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1040": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "1042": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1043": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1046": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1069": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1070": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1072": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1073": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "1085": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1097": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1105": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1106": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1111": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1119": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1138": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1161": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1173": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1190": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1211": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1227": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1230": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1231": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1235": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1246": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1260": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1265": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1275": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1276": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1284": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1291": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1295": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1314": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1328": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1333": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1340": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1341": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1342": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1345": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1347": {
+        "raw": "NO",
+        "label": "CONTRADICT"
+      },
+      "1350": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1355": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1364": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "1374": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      },
+      "1376": {
+        "raw": "no",
+        "label": "CONTRADICT"
+      },
+      "1402": {
+        "raw": "yes",
+        "label": "SUPPORT"
+      }
+    }
+  },
+  "retrieved_evidence": {
+    "rerank": {
+      "9": [
+        "44265107",
+        "8190282",
+        "21700295"
+      ],
+      "22": [
+        "6490571",
+        "14682243",
+        "35022568"
+      ],
+      "28": [
+        "12670680",
+        "14938990",
+        "40365566"
+      ],
+      "34": [
+        "21636085",
+        "11705328",
+        "8595678"
+      ],
+      "35": [
+        "18557974",
+        "33409100",
+        "37424881"
+      ],
+      "37": [
+        "33409100",
+        "16252863",
+        "18557974"
+      ],
+      "61": [
+        "374902",
+        "13899137",
+        "46353045"
+      ],
+      "63": [
+        "12909503",
+        "30122260",
+        "21295300"
+      ],
+      "64": [
+        "12909503",
+        "30122260",
+        "21295300"
+      ],
+      "73": [
+        "1031534",
+        "6076903",
+        "16546131"
+      ],
+      "74": [
+        "4387784",
+        "13965483",
+        "37768883"
+      ],
+      "76": [
+        "5531479",
+        "52925737",
+        "9225850"
+      ],
+      "79": [
+        "4407455",
+        "5099266",
+        "13583521"
+      ],
+      "80": [
+        "15365719",
+        "4920376",
+        "24190159"
+      ],
+      "95": [
+        "13966946",
+        "18025240",
+        "12409683"
+      ],
+      "108": [
+        "22995579",
+        "23865182",
+        "24865781"
+      ],
+      "120": [
+        "14606752",
+        "22995579",
+        "13883546"
+      ],
+      "126": [
+        "24943534",
+        "24512064",
+        "28738741"
+      ],
+      "144": [
+        "10582939",
+        "24101431",
+        "40164383"
+      ],
+      "160": [
+        "52874170",
+        "23816832",
+        "3078080"
+      ],
+      "161": [
+        "6903077",
+        "13903052",
+        "11837657"
+      ],
+      "165": [
+        "18872233",
+        "5824985",
+        "5864770"
+      ],
+      "168": [
+        "5824985",
+        "39903312",
+        "18872233"
+      ],
+      "175": [
+        "79336156",
+        "1710116",
+        "6985854"
+      ],
+      "181": [
+        "16966326",
+        "9217800",
+        "4889228"
+      ],
+      "184": [
+        "12827098",
+        "22406695",
+        "10078024"
+      ],
+      "201": [
+        "2462673",
+        "28006126",
+        "35651106"
+      ],
+      "211": [
+        "6903077",
+        "13794374",
+        "7137057"
+      ],
+      "214": [
+        "27054878",
+        "20887554",
+        "40156901"
+      ],
+      "221": [
+        "19205437",
+        "7736860",
+        "29691654"
+      ],
+      "224": [
+        "952111",
+        "32742683",
+        "35993767"
+      ],
+      "241": [
+        "2212067",
+        "11565780",
+        "16280642"
+      ],
+      "243": [
+        "8148122",
+        "24766509",
+        "3360421"
+      ],
+      "256": [
+        "5850219",
+        "3413083",
+        "829646"
+      ],
+      "267": [
+        "5912283",
+        "24865781",
+        "17973630"
+      ],
+      "283": [
+        "1974176",
+        "9822397",
+        "10071552"
+      ],
+      "301": [
+        "935538",
+        "3553087",
+        "16120395"
+      ],
+      "304": [
+        "13072112",
+        "14797520",
+        "32275758"
+      ],
+      "305": [
+        "14797520",
+        "13072112",
+        "29788648"
+      ],
+      "332": [
+        "29023309",
+        "8300657",
+        "11233339"
+      ],
+      "339": [
+        "23349986",
+        "24211561",
+        "15948830"
+      ],
+      "342": [
+        "23783727",
+        "6158879",
+        "7873737"
+      ],
+      "351": [
+        "21622715",
+        "3052213",
+        "9669099"
+      ],
+      "361": [
+        "38587347",
+        "15488881",
+        "5003144"
+      ],
+      "363": [
+        "13231899",
+        "27567994",
+        "15128866"
+      ],
+      "365": [
+        "600437",
+        "19561411",
+        "11254556"
+      ],
+      "377": [
+        "18810195",
+        "30208015",
+        "12225214"
+      ],
+      "379": [
+        "19005293",
+        "26068103",
+        "15425958"
+      ],
+      "381": [
+        "18340282",
+        "17450673",
+        "23557241"
+      ],
+      "382": [
+        "15521377",
+        "17412260",
+        "25419778"
+      ],
+      "394": [
+        "11360768",
+        "70455704",
+        "8842332"
+      ],
+      "404": [
+        "9278263",
+        "38886345",
+        "8671456"
+      ],
+      "406": [
+        "21199527",
+        "3531388",
+        "13509809"
+      ],
+      "417": [
+        "18852643",
+        "24906548",
+        "37205759"
+      ],
+      "420": [
+        "9315213",
+        "23397658",
+        "1840993"
+      ],
+      "432": [
+        "8002887",
+        "31882215",
+        "22896384"
+      ],
+      "434": [
+        "4418070",
+        "41877386",
+        "266641"
+      ],
+      "435": [
+        "4418070",
+        "41877386",
+        "7399084"
+      ],
+      "456": [
+        "20179918",
+        "18489989",
+        "2356950"
+      ],
+      "463": [
+        "25504006",
+        "14717213",
+        "31634628"
+      ],
+      "470": [
+        "12685434",
+        "51706771",
+        "6363093"
+      ],
+      "472": [
+        "4414481",
+        "26330861",
+        "23017040"
+      ],
+      "473": [
+        "2601135",
+        "35861290",
+        "195689757"
+      ],
+      "481": [
+        "14706752",
+        "8093935",
+        "14119470"
+      ],
+      "485": [
+        "502591",
+        "14637235",
+        "8533245"
+      ],
+      "490": [
+        "56893404",
+        "4312169",
+        "857189"
+      ],
+      "505": [
+        "22703082",
+        "7465900",
+        "23078022"
+      ],
+      "509": [
+        "25516011",
+        "10128893",
+        "18374364"
+      ],
+      "524": [
+        "6793674",
+        "14803797",
+        "33684572"
+      ],
+      "526": [
+        "1617327",
+        "18489989",
+        "8083310"
+      ],
+      "529": [
+        "3360421",
+        "26374799",
+        "19770974"
+      ],
+      "530": [
+        "3360421",
+        "26374799",
+        "19770974"
+      ],
+      "541": [
+        "2225918",
+        "17150648",
+        "11886686"
+      ],
+      "545": [
+        "1970884",
+        "5137019",
+        "11784947"
+      ],
+      "547": [
+        "10648422",
+        "8639034",
+        "15425958"
+      ],
+      "553": [
+        "1471041",
+        "27772649",
+        "10675756"
+      ],
+      "555": [
+        "43054703",
+        "9878167",
+        "14853989"
+      ],
+      "557": [
+        "1049501",
+        "20456030",
+        "13106686"
+      ],
+      "562": [
+        "20101846",
+        "24634621",
+        "1642727"
+      ],
+      "565": [
+        "16120395",
+        "8247597",
+        "26596106"
+      ],
+      "568": [
+        "23418635",
+        "4462419",
+        "6441369"
+      ],
+      "572": [
+        "7386360",
+        "5484763",
+        "20960682"
+      ],
+      "574": [
+        "10300888",
+        "9704467",
+        "43752562"
+      ],
+      "580": [
+        "23460562",
+        "17463549",
+        "1336292"
+      ],
+      "588": [
+        "7142113",
+        "5085118",
+        "16999023"
+      ],
+      "594": [
+        "19675911",
+        "31889025",
+        "24408040"
+      ],
+      "603": [
+        "6540064",
+        "33118292",
+        "9814332"
+      ],
+      "614": [
+        "9638032",
+        "33911859",
+        "7549811"
+      ],
+      "616": [
+        "3572885",
+        "22317868",
+        "3210545"
+      ],
+      "622": [
+        "25599283",
+        "4462079",
+        "9555784"
+      ],
+      "655": [
+        "10190462",
+        "4361990",
+        "10207180"
+      ],
+      "662": [
+        "37204802",
+        "4387494",
+        "18841257"
+      ],
+      "663": [
+        "22080671",
+        "5979056",
+        "25148216"
+      ],
+      "669": [
+        "25148216",
+        "6493422",
+        "22150633"
+      ],
+      "670": [
+        "5573975",
+        "25928548",
+        "12130690"
+      ],
+      "671": [
+        "5573975",
+        "25928548",
+        "11428884"
+      ],
+      "672": [
+        "15635366",
+        "46248894",
+        "1791637"
+      ],
+      "673": [
+        "2095573",
+        "7662206",
+        "30981192"
+      ],
+      "679": [
+        "23269537",
+        "18276599",
+        "18694784"
+      ],
+      "687": [
+        "25036988",
+        "2947540",
+        "4452659"
+      ],
+      "688": [
+        "25036988",
+        "34747208",
+        "14446279"
+      ],
+      "698": [
+        "22544171",
+        "834336",
+        "15692098"
+      ],
+      "709": [
+        "22442133",
+        "24269361",
+        "33912748"
+      ],
+      "710": [
+        "22442133",
+        "24269361",
+        "20148808"
+      ],
+      "726": [
+        "36444198",
+        "22406695",
+        "22621251"
+      ],
+      "737": [
+        "4417558",
+        "6609935",
+        "29073751"
+      ],
+      "745": [
+        "11291348",
+        "21307488",
+        "23972114"
+      ],
+      "751": [
+        "19800147",
+        "654735",
+        "10024681"
+      ],
+      "752": [
+        "19800147",
+        "28704738",
+        "5783785"
+      ],
+      "764": [
+        "5839365",
+        "7552215",
+        "7098463"
+      ],
+      "765": [
+        "5839365",
+        "7552215",
+        "11481946"
+      ],
+      "766": [
+        "5839365",
+        "7552215",
+        "11481946"
+      ],
+      "767": [
+        "2488880",
+        "29253460",
+        "12794099"
+      ],
+      "771": [
+        "2492146",
+        "15476777",
+        "24873253"
+      ],
+      "779": [
+        "13001323",
+        "2481032",
+        "6227220"
+      ],
+      "787": [
+        "4740447",
+        "21199527",
+        "2991954"
+      ],
+      "790": [
+        "15889329",
+        "17991818",
+        "15493354"
+      ],
+      "792": [
+        "3610080",
+        "24077493",
+        "116556376"
+      ],
+      "801": [
+        "22180793",
+        "4688340",
+        "31311495"
+      ],
+      "810": [
+        "22490293",
+        "1381673",
+        "7142113"
+      ],
+      "815": [
+        "8148304",
+        "23604601",
+        "4345315"
+      ],
+      "816": [
+        "8148304",
+        "23604601",
+        "4345315"
+      ],
+      "817": [
+        "8396189",
+        "17934082",
+        "43752562"
+      ],
+      "822": [
+        "2319305",
+        "15319019",
+        "25014337"
+      ],
+      "826": [
+        "140098548",
+        "26025370",
+        "4678846"
+      ],
+      "838": [
+        "18852643",
+        "23286603",
+        "15928989"
+      ],
+      "841": [
+        "15663829",
+        "24150328",
+        "34054472"
+      ],
+      "846": [
+        "22696649",
+        "34469966",
+        "195683603"
+      ],
+      "853": [
+        "24922825",
+        "19327364",
+        "1071991"
+      ],
+      "867": [
+        "14340571",
+        "11415809",
+        "9244474"
+      ],
+      "877": [
+        "313394",
+        "6431384",
+        "3095620"
+      ],
+      "881": [
+        "14803797",
+        "33684572",
+        "6327940"
+      ],
+      "890": [
+        "18816720",
+        "8665891",
+        "5114282"
+      ],
+      "891": [
+        "18816720",
+        "8665891",
+        "5114282"
+      ],
+      "893": [
+        "13509809",
+        "38899659",
+        "24721866"
+      ],
+      "917": [
+        "34071621",
+        "9301606",
+        "44724517"
+      ],
+      "928": [
+        "18174210",
+        "17168045",
+        "9254550"
+      ],
+      "933": [
+        "14711483",
+        "10984005",
+        "25319221"
+      ],
+      "945": [
+        "18537148",
+        "26112696",
+        "11201004"
+      ],
+      "954": [
+        "3355397",
+        "31229233",
+        "13619127"
+      ],
+      "959": [
+        "8780599",
+        "25300664",
+        "35495268"
+      ],
+      "965": [
+        "2820454",
+        "40817021",
+        "2028532"
+      ],
+      "972": [
+        "9764256",
+        "27873158",
+        "28617573"
+      ],
+      "973": [
+        "27446873",
+        "9764256",
+        "27873158"
+      ],
+      "977": [
+        "25726838",
+        "31933981",
+        "17223891"
+      ],
+      "984": [
+        "6828370",
+        "13964633",
+        "16364639"
+      ],
+      "988": [
+        "1383826",
+        "16929739",
+        "27900414"
+      ],
+      "989": [
+        "9988425",
+        "9675944",
+        "4427392"
+      ],
+      "990": [
+        "16472469",
+        "4444861",
+        "13791206"
+      ],
+      "994": [
+        "16472469",
+        "13791206",
+        "6710699"
+      ],
+      "997": [
+        "16472469",
+        "13023410",
+        "25462689"
+      ],
+      "1000": [
+        "16472469",
+        "26118532",
+        "25842866"
+      ],
+      "1009": [
+        "1982286",
+        "22049489",
+        "18938992"
+      ],
+      "1015": [
+        "6277638",
+        "797114",
+        "4434951"
+      ],
+      "1023": [
+        "16927286",
+        "9505448",
+        "39729277"
+      ],
+      "1040": [
+        "9451052",
+        "11844791",
+        "15778034"
+      ],
+      "1042": [
+        "17421851",
+        "24384587",
+        "13923069"
+      ],
+      "1043": [
+        "17671145",
+        "14116046",
+        "37256966"
+      ],
+      "1046": [
+        "471735",
+        "12486491",
+        "12240507"
+      ],
+      "1069": [
+        "4200695",
+        "40631095",
+        "53779698"
+      ],
+      "1070": [
+        "6129301",
+        "154243324",
+        "31019903"
+      ],
+      "1072": [
+        "4824840",
+        "3776162",
+        "5185871"
+      ],
+      "1073": [
+        "4824840",
+        "3776162",
+        "5185871"
+      ],
+      "1085": [
+        "5691302",
+        "32159283",
+        "6158879"
+      ],
+      "1097": [
+        "26851674",
+        "10279084",
+        "4729644"
+      ],
+      "1105": [
+        "6710713",
+        "17374970",
+        "28017005"
+      ],
+      "1106": [
+        "6710713",
+        "17374970",
+        "11624482"
+      ],
+      "1111": [
+        "1686881",
+        "2032877",
+        "26341063"
+      ],
+      "1119": [
+        "5323845",
+        "26710772",
+        "18997216"
+      ],
+      "1138": [
+        "43619625",
+        "3531388",
+        "13509809"
+      ],
+      "1161": [
+        "19851614",
+        "3052213",
+        "23269537"
+      ],
+      "1173": [
+        "7370282",
+        "12885341",
+        "8563659"
+      ],
+      "1190": [
+        "27768226",
+        "341324",
+        "32421068"
+      ],
+      "1211": [
+        "4928282",
+        "44935041",
+        "42601237"
+      ],
+      "1227": [
+        "25641414",
+        "881332",
+        "7662395"
+      ],
+      "1230": [
+        "13905670",
+        "30908508",
+        "4418070"
+      ],
+      "1231": [
+        "13905670",
+        "9244474",
+        "24906548"
+      ],
+      "1235": [
+        "29381091",
+        "26902591",
+        "14865329"
+      ],
+      "1246": [
+        "49429882",
+        "22236223",
+        "17450673"
+      ],
+      "1260": [
+        "24341590",
+        "13069283",
+        "20454006"
+      ],
+      "1265": [
+        "37480103",
+        "13831842",
+        "13765757"
+      ],
+      "1275": [
+        "4406819",
+        "27731651",
+        "7481159"
+      ],
+      "1276": [
+        "34615397",
+        "3475317",
+        "24707550"
+      ],
+      "1284": [
+        "3578380",
+        "2492146",
+        "3935126"
+      ],
+      "1291": [
+        "4886637",
+        "56893404",
+        "17656445"
+      ],
+      "1295": [
+        "21239672",
+        "24998764",
+        "32159283"
+      ],
+      "1314": [
+        "16237005",
+        "4300851",
+        "13613916"
+      ],
+      "1328": [
+        "34615397",
+        "3475317",
+        "16066726"
+      ],
+      "1333": [
+        "1649738",
+        "25571386",
+        "42377686"
+      ],
+      "1340": [
+        "15482274",
+        "52874170",
+        "11718220"
+      ],
+      "1341": [
+        "15482274",
+        "34268160",
+        "52874170"
+      ],
+      "1342": [
+        "4767806",
+        "15926408",
+        "8148122"
+      ],
+      "1345": [
+        "28249680",
+        "11903247",
+        "21557055"
+      ],
+      "1347": [
+        "19005293",
+        "3835423",
+        "40473317"
+      ],
+      "1350": [
+        "5377642",
+        "14938990",
+        "18938992"
+      ],
+      "1355": [
+        "5256564",
+        "25725663",
+        "10852047"
+      ],
+      "1364": [
+        "1122279",
+        "79447",
+        "27099731"
+      ],
+      "1374": [
+        "21993510",
+        "21623140",
+        "23245050"
+      ],
+      "1376": [
+        "19408393",
+        "3944632",
+        "11117498"
+      ],
+      "1402": [
+        "29877890",
+        "26495128",
+        "20725212"
+      ]
+    },
+    "kl_blend": {
+      "9": [
+        "44265107",
+        "24700152",
+        "21700295"
+      ],
+      "22": [
+        "6490571",
+        "73473433",
+        "35022568"
+      ],
+      "28": [
+        "12670680",
+        "14938990",
+        "28015516"
+      ],
+      "34": [
+        "11705328",
+        "21636085",
+        "18557974"
+      ],
+      "35": [
+        "33409100",
+        "18557974",
+        "16252863"
+      ],
+      "37": [
+        "33409100",
+        "16252863",
+        "18557974"
+      ],
+      "61": [
+        "374902",
+        "46353045",
+        "13899137"
+      ],
+      "63": [
+        "12909503",
+        "30122260",
+        "21295300"
+      ],
+      "64": [
+        "30122260",
+        "12909503",
+        "5572127"
+      ],
+      "73": [
+        "1031534",
+        "6076903",
+        "778436"
+      ],
+      "74": [
+        "4387784",
+        "37768883",
+        "13965483"
+      ],
+      "76": [
+        "5531479",
+        "52925737",
+        "9225850"
+      ],
+      "79": [
+        "4407455",
+        "13583521",
+        "5099266"
+      ],
+      "80": [
+        "15365719",
+        "4920376",
+        "24190159"
+      ],
+      "95": [
+        "13966946",
+        "18025240",
+        "12409683"
+      ],
+      "108": [
+        "22995579",
+        "23865182",
+        "24865781"
+      ],
+      "120": [
+        "14606752",
+        "22995579",
+        "6191684"
+      ],
+      "126": [
+        "24512064",
+        "28738741",
+        "24943534"
+      ],
+      "144": [
+        "10582939",
+        "24101431",
+        "40164383"
+      ],
+      "160": [
+        "52874170",
+        "23816832",
+        "3078080"
+      ],
+      "161": [
+        "6903077",
+        "13903052",
+        "11837657"
+      ],
+      "165": [
+        "5824985",
+        "18872233",
+        "25973484"
+      ],
+      "168": [
+        "5824985",
+        "43220289",
+        "18872233"
+      ],
+      "175": [
+        "79336156",
+        "1710116",
+        "6985854"
+      ],
+      "181": [
+        "16966326",
+        "9217800",
+        "4889228"
+      ],
+      "184": [
+        "12827098",
+        "7521113",
+        "22406695"
+      ],
+      "201": [
+        "2462673",
+        "35651106",
+        "28006126"
+      ],
+      "211": [
+        "6903077",
+        "4347374",
+        "44366096"
+      ],
+      "214": [
+        "27054878",
+        "20887554",
+        "750781"
+      ],
+      "221": [
+        "19205437",
+        "7736860",
+        "30303335"
+      ],
+      "224": [
+        "952111",
+        "32742683",
+        "10812605"
+      ],
+      "241": [
+        "2212067",
+        "11565780",
+        "27247460"
+      ],
+      "243": [
+        "8148122",
+        "14225271",
+        "8759633"
+      ],
+      "256": [
+        "5850219",
+        "3413083",
+        "829646"
+      ],
+      "267": [
+        "5912283",
+        "24865781",
+        "17973630"
+      ],
+      "283": [
+        "1974176",
+        "9822397",
+        "10071552"
+      ],
+      "301": [
+        "16120395",
+        "3553087",
+        "935538"
+      ],
+      "304": [
+        "14797520",
+        "32275758",
+        "25175223"
+      ],
+      "305": [
+        "14797520",
+        "25175223",
+        "13072112"
+      ],
+      "332": [
+        "29023309",
+        "8300657",
+        "11233339"
+      ],
+      "339": [
+        "23349986",
+        "24211561",
+        "36288526"
+      ],
+      "342": [
+        "23783727",
+        "5884524",
+        "6158879"
+      ],
+      "351": [
+        "21622715",
+        "3052213",
+        "20028729"
+      ],
+      "361": [
+        "38587347",
+        "15488881",
+        "10354110"
+      ],
+      "363": [
+        "27567994",
+        "13231899",
+        "15128866"
+      ],
+      "365": [
+        "600437",
+        "14328288",
+        "19561411"
+      ],
+      "377": [
+        "18810195",
+        "30208015",
+        "21754541"
+      ],
+      "379": [
+        "19005293",
+        "26068103",
+        "15425958"
+      ],
+      "381": [
+        "18340282",
+        "17450673",
+        "23557241"
+      ],
+      "382": [
+        "15521377",
+        "17412260",
+        "9559146"
+      ],
+      "394": [
+        "70455704",
+        "11360768",
+        "8842332"
+      ],
+      "404": [
+        "9278263",
+        "21150010",
+        "18938992"
+      ],
+      "406": [
+        "21199527",
+        "43619625",
+        "25022826"
+      ],
+      "417": [
+        "37205759",
+        "18852643",
+        "30351165"
+      ],
+      "420": [
+        "9315213",
+        "23397658",
+        "13923069"
+      ],
+      "432": [
+        "8002887",
+        "31882215",
+        "22896384"
+      ],
+      "434": [
+        "4418070",
+        "9500590",
+        "266641"
+      ],
+      "435": [
+        "4418070",
+        "9500590",
+        "266641"
+      ],
+      "456": [
+        "18489989",
+        "20179918",
+        "6455142"
+      ],
+      "463": [
+        "31634628",
+        "25504006",
+        "14717213"
+      ],
+      "470": [
+        "12685434",
+        "51706771",
+        "21692235"
+      ],
+      "472": [
+        "4414481",
+        "26330861",
+        "13613916"
+      ],
+      "473": [
+        "2601135",
+        "7177329",
+        "7548577"
+      ],
+      "481": [
+        "14706752",
+        "8093935",
+        "14119470"
+      ],
+      "485": [
+        "14637235",
+        "502591",
+        "8533245"
+      ],
+      "490": [
+        "56893404",
+        "834336",
+        "4312169"
+      ],
+      "505": [
+        "22703082",
+        "7465900",
+        "24705390"
+      ],
+      "509": [
+        "25516011",
+        "10128893",
+        "18374364"
+      ],
+      "524": [
+        "6793674",
+        "14803797",
+        "46328296"
+      ],
+      "526": [
+        "1617327",
+        "18489989",
+        "27822315"
+      ],
+      "529": [
+        "3360421",
+        "19770974",
+        "25413327"
+      ],
+      "530": [
+        "3360421",
+        "19770974",
+        "36651210"
+      ],
+      "541": [
+        "2225918",
+        "17150648",
+        "11886686"
+      ],
+      "545": [
+        "1970884",
+        "11784947",
+        "5137019"
+      ],
+      "547": [
+        "10648422",
+        "8639034",
+        "5800138"
+      ],
+      "553": [
+        "1471041",
+        "27772649",
+        "21060008"
+      ],
+      "555": [
+        "43054703",
+        "9878167",
+        "14853989"
+      ],
+      "557": [
+        "1049501",
+        "13106686",
+        "9878167"
+      ],
+      "562": [
+        "20101846",
+        "24634621",
+        "2028532"
+      ],
+      "565": [
+        "16120395",
+        "8247597",
+        "26596106"
+      ],
+      "568": [
+        "23418635",
+        "4462419",
+        "6441369"
+      ],
+      "572": [
+        "10648422",
+        "7386360",
+        "7343711"
+      ],
+      "574": [
+        "10300888",
+        "9704467",
+        "9548440"
+      ],
+      "580": [
+        "23460562",
+        "17463549",
+        "1336292"
+      ],
+      "588": [
+        "7142113",
+        "5085118",
+        "16999023"
+      ],
+      "594": [
+        "19675911",
+        "31889025",
+        "24408040"
+      ],
+      "603": [
+        "6540064",
+        "33118292",
+        "9814332"
+      ],
+      "614": [
+        "9638032",
+        "33911859",
+        "7549811"
+      ],
+      "616": [
+        "17911973",
+        "22317868",
+        "3572885"
+      ],
+      "622": [
+        "25599283",
+        "4462079",
+        "9555784"
+      ],
+      "655": [
+        "4361990",
+        "10190462",
+        "10207180"
+      ],
+      "662": [
+        "37204802",
+        "4387494",
+        "18841257"
+      ],
+      "663": [
+        "22080671",
+        "5979056",
+        "25148216"
+      ],
+      "669": [
+        "25148216",
+        "6493422",
+        "22150633"
+      ],
+      "670": [
+        "5573975",
+        "25928548",
+        "28249680"
+      ],
+      "671": [
+        "5573975",
+        "25928548",
+        "32101982"
+      ],
+      "672": [
+        "15635366",
+        "46248894",
+        "1791637"
+      ],
+      "673": [
+        "2095573",
+        "7662206",
+        "30981192"
+      ],
+      "679": [
+        "18694784",
+        "18276599",
+        "12149169"
+      ],
+      "687": [
+        "25036988",
+        "2947540",
+        "4452659"
+      ],
+      "688": [
+        "25036988",
+        "34747208",
+        "4452659"
+      ],
+      "698": [
+        "834336",
+        "22544171",
+        "15692098"
+      ],
+      "709": [
+        "22442133",
+        "24269361",
+        "33912748"
+      ],
+      "710": [
+        "22442133",
+        "24269361",
+        "20148808"
+      ],
+      "726": [
+        "36444198",
+        "22406695",
+        "22621251"
+      ],
+      "737": [
+        "4417558",
+        "6609935",
+        "29073751"
+      ],
+      "745": [
+        "11291348",
+        "21307488",
+        "12225214"
+      ],
+      "751": [
+        "19800147",
+        "654735",
+        "1976183"
+      ],
+      "752": [
+        "19800147",
+        "1976183",
+        "28704738"
+      ],
+      "764": [
+        "5839365",
+        "7552215",
+        "11481946"
+      ],
+      "765": [
+        "5839365",
+        "7552215",
+        "12994780"
+      ],
+      "766": [
+        "5839365",
+        "7552215",
+        "11481946"
+      ],
+      "767": [
+        "2488880",
+        "29253460",
+        "33533307"
+      ],
+      "771": [
+        "15476777",
+        "2492146",
+        "10958594"
+      ],
+      "779": [
+        "13001323",
+        "2481032",
+        "40090058"
+      ],
+      "787": [
+        "4740447",
+        "30543439",
+        "2991954"
+      ],
+      "790": [
+        "15493354",
+        "15889329",
+        "17991818"
+      ],
+      "792": [
+        "3610080",
+        "24077493",
+        "9274291"
+      ],
+      "801": [
+        "22180793",
+        "17188921",
+        "3727986"
+      ],
+      "810": [
+        "22490293",
+        "1381673",
+        "7142113"
+      ],
+      "815": [
+        "8148304",
+        "23604601",
+        "9478135"
+      ],
+      "816": [
+        "8148304",
+        "23604601",
+        "4345315"
+      ],
+      "817": [
+        "2601324",
+        "8396189",
+        "17934082"
+      ],
+      "822": [
+        "2319305",
+        "15319019",
+        "25014337"
+      ],
+      "826": [
+        "140098548",
+        "26025370",
+        "4678846"
+      ],
+      "838": [
+        "23286603",
+        "6259170",
+        "18852643"
+      ],
+      "841": [
+        "15663829",
+        "3127341",
+        "3912660"
+      ],
+      "846": [
+        "22696649",
+        "195683603",
+        "3330111"
+      ],
+      "853": [
+        "24922825",
+        "19327364",
+        "1071991"
+      ],
+      "867": [
+        "14340571",
+        "11415809",
+        "9244474"
+      ],
+      "877": [
+        "313394",
+        "6431384",
+        "3095620"
+      ],
+      "881": [
+        "14803797",
+        "6327940",
+        "33684572"
+      ],
+      "890": [
+        "18816720",
+        "8665891",
+        "17454301"
+      ],
+      "891": [
+        "18816720",
+        "8665891",
+        "17454301"
+      ],
+      "893": [
+        "13509809",
+        "38899659",
+        "43619625"
+      ],
+      "917": [
+        "34071621",
+        "9301606",
+        "15113221"
+      ],
+      "928": [
+        "18174210",
+        "17168045",
+        "25420421"
+      ],
+      "933": [
+        "14711483",
+        "25319221",
+        "23349986"
+      ],
+      "945": [
+        "18537148",
+        "26112696",
+        "13230773"
+      ],
+      "954": [
+        "3355397",
+        "31229233",
+        "13619127"
+      ],
+      "959": [
+        "8780599",
+        "35495268",
+        "12770738"
+      ],
+      "965": [
+        "2820454",
+        "40817021",
+        "2028532"
+      ],
+      "972": [
+        "9764256",
+        "27873158",
+        "27446873"
+      ],
+      "973": [
+        "27446873",
+        "27873158",
+        "9764256"
+      ],
+      "977": [
+        "25726838",
+        "9226649",
+        "17223891"
+      ],
+      "984": [
+        "6828370",
+        "16364639",
+        "16346504"
+      ],
+      "988": [
+        "1383826",
+        "4313478",
+        "16929739"
+      ],
+      "989": [
+        "9988425",
+        "427082",
+        "9675944"
+      ],
+      "990": [
+        "16472469",
+        "4444861",
+        "13791206"
+      ],
+      "994": [
+        "16472469",
+        "13791206",
+        "19522248"
+      ],
+      "997": [
+        "16472469",
+        "13023410",
+        "25462689"
+      ],
+      "1000": [
+        "26118532",
+        "16472469",
+        "25842866"
+      ],
+      "1009": [
+        "1982286",
+        "9076196",
+        "22049489"
+      ],
+      "1015": [
+        "6277638",
+        "797114",
+        "4434951"
+      ],
+      "1023": [
+        "16927286",
+        "39729277",
+        "30261663"
+      ],
+      "1040": [
+        "9451052",
+        "15778034",
+        "11844791"
+      ],
+      "1042": [
+        "17421851",
+        "24384587",
+        "9334631"
+      ],
+      "1043": [
+        "17671145",
+        "14116046",
+        "37256966"
+      ],
+      "1046": [
+        "12486491",
+        "12240507",
+        "471735"
+      ],
+      "1069": [
+        "4200695",
+        "38493521",
+        "40631095"
+      ],
+      "1070": [
+        "154243324",
+        "6129301",
+        "33135135"
+      ],
+      "1072": [
+        "4824840",
+        "3776162",
+        "5185871"
+      ],
+      "1073": [
+        "4824840",
+        "3776162",
+        "5596332"
+      ],
+      "1085": [
+        "5691302",
+        "32159283",
+        "6158879"
+      ],
+      "1097": [
+        "26851674",
+        "18038250",
+        "10279084"
+      ],
+      "1105": [
+        "6710713",
+        "17374970",
+        "28017005"
+      ],
+      "1106": [
+        "6710713",
+        "17374970",
+        "11624482"
+      ],
+      "1111": [
+        "1686881",
+        "26341063",
+        "43483151"
+      ],
+      "1119": [
+        "26710772",
+        "5323845",
+        "18997216"
+      ],
+      "1138": [
+        "43619625",
+        "3531388",
+        "39776978"
+      ],
+      "1161": [
+        "13048272",
+        "11902109",
+        "54561384"
+      ],
+      "1173": [
+        "7370282",
+        "12885341",
+        "13778710"
+      ],
+      "1190": [
+        "27768226",
+        "341324",
+        "6561200"
+      ],
+      "1211": [
+        "4928282",
+        "44935041",
+        "13636631"
+      ],
+      "1227": [
+        "25641414",
+        "881332",
+        "7662395"
+      ],
+      "1230": [
+        "13905670",
+        "4418070",
+        "16119973"
+      ],
+      "1231": [
+        "13905670",
+        "5922085",
+        "9244474"
+      ],
+      "1235": [
+        "29381091",
+        "14865329",
+        "20532591"
+      ],
+      "1246": [
+        "49429882",
+        "22236223",
+        "17450673"
+      ],
+      "1260": [
+        "24341590",
+        "13069283",
+        "20454006"
+      ],
+      "1265": [
+        "37480103",
+        "23557241",
+        "13831842"
+      ],
+      "1275": [
+        "4406819",
+        "27731651",
+        "7481159"
+      ],
+      "1276": [
+        "34615397",
+        "3475317",
+        "21258863"
+      ],
+      "1284": [
+        "3578380",
+        "2492146",
+        "32421068"
+      ],
+      "1291": [
+        "56893404",
+        "4886637",
+        "25571386"
+      ],
+      "1295": [
+        "21239672",
+        "4474874",
+        "28264919"
+      ],
+      "1314": [
+        "16237005",
+        "4300851",
+        "36904081"
+      ],
+      "1328": [
+        "34615397",
+        "3475317",
+        "33835579"
+      ],
+      "1333": [
+        "1649738",
+        "42377686",
+        "40323454"
+      ],
+      "1340": [
+        "15482274",
+        "11718220",
+        "18062308"
+      ],
+      "1341": [
+        "15482274",
+        "11718220",
+        "18062308"
+      ],
+      "1342": [
+        "4767806",
+        "8148122",
+        "8759633"
+      ],
+      "1345": [
+        "21557055",
+        "11903247",
+        "6896063"
+      ],
+      "1347": [
+        "19005293",
+        "3835423",
+        "12100963"
+      ],
+      "1350": [
+        "5377642",
+        "14938990",
+        "18938992"
+      ],
+      "1355": [
+        "5256564",
+        "25725663",
+        "10852047"
+      ],
+      "1364": [
+        "1122279",
+        "79447",
+        "27099731"
+      ],
+      "1374": [
+        "21993510",
+        "21623140",
+        "36558211"
+      ],
+      "1376": [
+        "19408393",
+        "3944632",
+        "11117498"
+      ],
+      "1402": [
+        "29877890",
+        "20725212",
+        "30184745"
+      ]
+    },
+    "jko_blend": {
+      "9": [
+        "44265107",
+        "24700152",
+        "2048139"
+      ],
+      "22": [
+        "6490571",
+        "73473433",
+        "35022568"
+      ],
+      "28": [
+        "12670680",
+        "14938990",
+        "28015516"
+      ],
+      "34": [
+        "11705328",
+        "21636085",
+        "18557974"
+      ],
+      "35": [
+        "33409100",
+        "18557974",
+        "16252863"
+      ],
+      "37": [
+        "33409100",
+        "16252863",
+        "18557974"
+      ],
+      "61": [
+        "374902",
+        "46353045",
+        "13899137"
+      ],
+      "63": [
+        "12909503",
+        "30122260",
+        "21295300"
+      ],
+      "64": [
+        "30122260",
+        "12909503",
+        "21295300"
+      ],
+      "73": [
+        "1031534",
+        "6076903",
+        "18895793"
+      ],
+      "74": [
+        "4387784",
+        "37768883",
+        "13965483"
+      ],
+      "76": [
+        "5531479",
+        "52925737",
+        "9225850"
+      ],
+      "79": [
+        "4407455",
+        "13583521",
+        "5099266"
+      ],
+      "80": [
+        "15365719",
+        "4920376",
+        "24190159"
+      ],
+      "95": [
+        "13966946",
+        "18025240",
+        "12409683"
+      ],
+      "108": [
+        "22995579",
+        "23865182",
+        "24865781"
+      ],
+      "120": [
+        "14606752",
+        "22995579",
+        "6191684"
+      ],
+      "126": [
+        "24512064",
+        "28738741",
+        "24943534"
+      ],
+      "144": [
+        "10582939",
+        "24101431",
+        "40164383"
+      ],
+      "160": [
+        "52874170",
+        "23816832",
+        "3078080"
+      ],
+      "161": [
+        "6903077",
+        "13903052",
+        "11837657"
+      ],
+      "165": [
+        "5824985",
+        "18872233",
+        "25973484"
+      ],
+      "168": [
+        "5824985",
+        "39903312",
+        "43220289"
+      ],
+      "175": [
+        "79336156",
+        "1710116",
+        "6985854"
+      ],
+      "181": [
+        "16966326",
+        "9217800",
+        "4889228"
+      ],
+      "184": [
+        "12827098",
+        "7521113",
+        "22406695"
+      ],
+      "201": [
+        "2462673",
+        "35651106",
+        "28006126"
+      ],
+      "211": [
+        "6903077",
+        "4347374",
+        "7137057"
+      ],
+      "214": [
+        "27054878",
+        "20887554",
+        "750781"
+      ],
+      "221": [
+        "19205437",
+        "7736860",
+        "30303335"
+      ],
+      "224": [
+        "952111",
+        "32742683",
+        "10812605"
+      ],
+      "241": [
+        "2212067",
+        "11565780",
+        "27247460"
+      ],
+      "243": [
+        "8148122",
+        "14225271",
+        "8759633"
+      ],
+      "256": [
+        "5850219",
+        "3413083",
+        "829646"
+      ],
+      "267": [
+        "5912283",
+        "24865781",
+        "17973630"
+      ],
+      "283": [
+        "1974176",
+        "9822397",
+        "10071552"
+      ],
+      "301": [
+        "16120395",
+        "3553087",
+        "935538"
+      ],
+      "304": [
+        "14797520",
+        "32275758",
+        "25175223"
+      ],
+      "305": [
+        "14797520",
+        "25175223",
+        "13072112"
+      ],
+      "332": [
+        "29023309",
+        "8300657",
+        "11233339"
+      ],
+      "339": [
+        "23349986",
+        "24211561",
+        "36288526"
+      ],
+      "342": [
+        "23783727",
+        "5884524",
+        "6158879"
+      ],
+      "351": [
+        "21622715",
+        "3052213",
+        "20028729"
+      ],
+      "361": [
+        "38587347",
+        "15488881",
+        "10354110"
+      ],
+      "363": [
+        "27567994",
+        "13231899",
+        "15128866"
+      ],
+      "365": [
+        "600437",
+        "14328288",
+        "19561411"
+      ],
+      "377": [
+        "18810195",
+        "30208015",
+        "21754541"
+      ],
+      "379": [
+        "19005293",
+        "26068103",
+        "15425958"
+      ],
+      "381": [
+        "18340282",
+        "17450673",
+        "23557241"
+      ],
+      "382": [
+        "15521377",
+        "17412260",
+        "9559146"
+      ],
+      "394": [
+        "70455704",
+        "11360768",
+        "8842332"
+      ],
+      "404": [
+        "9278263",
+        "18938992",
+        "21150010"
+      ],
+      "406": [
+        "21199527",
+        "43619625",
+        "25022826"
+      ],
+      "417": [
+        "37205759",
+        "18852643",
+        "30351165"
+      ],
+      "420": [
+        "9315213",
+        "23397658",
+        "6227220"
+      ],
+      "432": [
+        "8002887",
+        "31882215",
+        "33507866"
+      ],
+      "434": [
+        "4418070",
+        "9500590",
+        "266641"
+      ],
+      "435": [
+        "4418070",
+        "9500590",
+        "266641"
+      ],
+      "456": [
+        "18489989",
+        "6455142",
+        "20179918"
+      ],
+      "463": [
+        "31634628",
+        "25504006",
+        "14717213"
+      ],
+      "470": [
+        "12685434",
+        "51706771",
+        "21692235"
+      ],
+      "472": [
+        "4414481",
+        "26330861",
+        "13613916"
+      ],
+      "473": [
+        "2601135",
+        "35861290",
+        "7177329"
+      ],
+      "481": [
+        "14706752",
+        "8093935",
+        "14119470"
+      ],
+      "485": [
+        "14637235",
+        "502591",
+        "8533245"
+      ],
+      "490": [
+        "56893404",
+        "4312169",
+        "834336"
+      ],
+      "505": [
+        "22703082",
+        "7465900",
+        "24705390"
+      ],
+      "509": [
+        "25516011",
+        "18374364",
+        "10128893"
+      ],
+      "524": [
+        "6793674",
+        "14803797",
+        "29148743"
+      ],
+      "526": [
+        "1617327",
+        "18489989",
+        "27822315"
+      ],
+      "529": [
+        "3360421",
+        "19770974",
+        "25413327"
+      ],
+      "530": [
+        "3360421",
+        "19770974",
+        "36651210"
+      ],
+      "541": [
+        "2225918",
+        "17150648",
+        "11886686"
+      ],
+      "545": [
+        "1970884",
+        "11784947",
+        "5137019"
+      ],
+      "547": [
+        "10648422",
+        "8639034",
+        "5800138"
+      ],
+      "553": [
+        "1471041",
+        "27772649",
+        "21060008"
+      ],
+      "555": [
+        "43054703",
+        "9878167",
+        "14853989"
+      ],
+      "557": [
+        "1049501",
+        "13106686",
+        "9878167"
+      ],
+      "562": [
+        "20101846",
+        "24634621",
+        "2028532"
+      ],
+      "565": [
+        "16120395",
+        "8247597",
+        "26596106"
+      ],
+      "568": [
+        "23418635",
+        "4462419",
+        "6441369"
+      ],
+      "572": [
+        "10648422",
+        "7343711",
+        "34016944"
+      ],
+      "574": [
+        "10300888",
+        "9704467",
+        "9548440"
+      ],
+      "580": [
+        "23460562",
+        "17463549",
+        "1336292"
+      ],
+      "588": [
+        "7142113",
+        "5085118",
+        "16999023"
+      ],
+      "594": [
+        "19675911",
+        "31889025",
+        "24408040"
+      ],
+      "603": [
+        "6540064",
+        "33118292",
+        "9814332"
+      ],
+      "614": [
+        "9638032",
+        "33911859",
+        "7549811"
+      ],
+      "616": [
+        "17911973",
+        "22317868",
+        "3572885"
+      ],
+      "622": [
+        "25599283",
+        "4462079",
+        "9555784"
+      ],
+      "655": [
+        "4361990",
+        "10190462",
+        "10207180"
+      ],
+      "662": [
+        "37204802",
+        "4387494",
+        "18841257"
+      ],
+      "663": [
+        "22080671",
+        "5979056",
+        "14407673"
+      ],
+      "669": [
+        "25148216",
+        "6493422",
+        "22150633"
+      ],
+      "670": [
+        "5573975",
+        "25928548",
+        "28249680"
+      ],
+      "671": [
+        "5573975",
+        "25928548",
+        "32101982"
+      ],
+      "672": [
+        "15635366",
+        "46248894",
+        "1791637"
+      ],
+      "673": [
+        "2095573",
+        "7662206",
+        "30981192"
+      ],
+      "679": [
+        "18694784",
+        "18276599",
+        "12149169"
+      ],
+      "687": [
+        "25036988",
+        "2947540",
+        "4452659"
+      ],
+      "688": [
+        "25036988",
+        "34747208",
+        "4452659"
+      ],
+      "698": [
+        "834336",
+        "22544171",
+        "15692098"
+      ],
+      "709": [
+        "22442133",
+        "24269361",
+        "33912748"
+      ],
+      "710": [
+        "22442133",
+        "24269361",
+        "20148808"
+      ],
+      "726": [
+        "36444198",
+        "22406695",
+        "22621251"
+      ],
+      "737": [
+        "4417558",
+        "6609935",
+        "29073751"
+      ],
+      "745": [
+        "11291348",
+        "21307488",
+        "12225214"
+      ],
+      "751": [
+        "19800147",
+        "654735",
+        "10024681"
+      ],
+      "752": [
+        "19800147",
+        "1976183",
+        "10024681"
+      ],
+      "764": [
+        "5839365",
+        "7552215",
+        "7098463"
+      ],
+      "765": [
+        "5839365",
+        "7552215",
+        "12994780"
+      ],
+      "766": [
+        "5839365",
+        "7552215",
+        "11481946"
+      ],
+      "767": [
+        "2488880",
+        "29253460",
+        "12794099"
+      ],
+      "771": [
+        "15476777",
+        "2492146",
+        "24873253"
+      ],
+      "779": [
+        "13001323",
+        "2481032",
+        "6171953"
+      ],
+      "787": [
+        "4740447",
+        "2991954",
+        "30543439"
+      ],
+      "790": [
+        "15493354",
+        "15889329",
+        "16863359"
+      ],
+      "792": [
+        "3610080",
+        "24077493",
+        "9274291"
+      ],
+      "801": [
+        "22180793",
+        "17188921",
+        "3727986"
+      ],
+      "810": [
+        "22490293",
+        "1381673",
+        "7142113"
+      ],
+      "815": [
+        "8148304",
+        "23604601",
+        "9478135"
+      ],
+      "816": [
+        "8148304",
+        "23604601",
+        "4345315"
+      ],
+      "817": [
+        "2601324",
+        "8396189",
+        "17934082"
+      ],
+      "822": [
+        "2319305",
+        "15319019",
+        "25014337"
+      ],
+      "826": [
+        "140098548",
+        "26025370",
+        "4678846"
+      ],
+      "838": [
+        "23286603",
+        "6259170",
+        "18852643"
+      ],
+      "841": [
+        "15663829",
+        "3127341",
+        "3912660"
+      ],
+      "846": [
+        "22696649",
+        "195683603",
+        "3330111"
+      ],
+      "853": [
+        "24922825",
+        "19327364",
+        "1071991"
+      ],
+      "867": [
+        "14340571",
+        "11415809",
+        "9244474"
+      ],
+      "877": [
+        "313394",
+        "6431384",
+        "3095620"
+      ],
+      "881": [
+        "14803797",
+        "6327940",
+        "33684572"
+      ],
+      "890": [
+        "18816720",
+        "8665891",
+        "17454301"
+      ],
+      "891": [
+        "18816720",
+        "8665891",
+        "17454301"
+      ],
+      "893": [
+        "13509809",
+        "38899659",
+        "43619625"
+      ],
+      "917": [
+        "34071621",
+        "9301606",
+        "15113221"
+      ],
+      "928": [
+        "18174210",
+        "17168045",
+        "25420421"
+      ],
+      "933": [
+        "14711483",
+        "25319221",
+        "23349986"
+      ],
+      "945": [
+        "18537148",
+        "26112696",
+        "13230773"
+      ],
+      "954": [
+        "3355397",
+        "31229233",
+        "24581365"
+      ],
+      "959": [
+        "8780599",
+        "35495268",
+        "12770738"
+      ],
+      "965": [
+        "2820454",
+        "40817021",
+        "2028532"
+      ],
+      "972": [
+        "9764256",
+        "27873158",
+        "27446873"
+      ],
+      "973": [
+        "27446873",
+        "27873158",
+        "9764256"
+      ],
+      "977": [
+        "25726838",
+        "9226649",
+        "17223891"
+      ],
+      "984": [
+        "6828370",
+        "16364639",
+        "16346504"
+      ],
+      "988": [
+        "1383826",
+        "4313478",
+        "16929739"
+      ],
+      "989": [
+        "9988425",
+        "427082",
+        "9675944"
+      ],
+      "990": [
+        "16472469",
+        "4444861",
+        "13791206"
+      ],
+      "994": [
+        "16472469",
+        "13791206",
+        "19522248"
+      ],
+      "997": [
+        "16472469",
+        "13023410",
+        "20420780"
+      ],
+      "1000": [
+        "26118532",
+        "16472469",
+        "25842866"
+      ],
+      "1009": [
+        "1982286",
+        "9076196",
+        "22049489"
+      ],
+      "1015": [
+        "6277638",
+        "797114",
+        "4434951"
+      ],
+      "1023": [
+        "16927286",
+        "39729277",
+        "30261663"
+      ],
+      "1040": [
+        "9451052",
+        "15778034",
+        "11844791"
+      ],
+      "1042": [
+        "17421851",
+        "24384587",
+        "9334631"
+      ],
+      "1043": [
+        "17671145",
+        "14116046",
+        "37256966"
+      ],
+      "1046": [
+        "12486491",
+        "12240507",
+        "471735"
+      ],
+      "1069": [
+        "4200695",
+        "38493521",
+        "40631095"
+      ],
+      "1070": [
+        "154243324",
+        "6129301",
+        "33135135"
+      ],
+      "1072": [
+        "4824840",
+        "3776162",
+        "5185871"
+      ],
+      "1073": [
+        "4824840",
+        "3776162",
+        "5596332"
+      ],
+      "1085": [
+        "5691302",
+        "32159283",
+        "6158879"
+      ],
+      "1097": [
+        "26851674",
+        "18038250",
+        "10279084"
+      ],
+      "1105": [
+        "6710713",
+        "17374970",
+        "28017005"
+      ],
+      "1106": [
+        "6710713",
+        "17374970",
+        "28017005"
+      ],
+      "1111": [
+        "1686881",
+        "26341063",
+        "8509018"
+      ],
+      "1119": [
+        "26710772",
+        "5323845",
+        "18997216"
+      ],
+      "1138": [
+        "43619625",
+        "3531388",
+        "39776978"
+      ],
+      "1161": [
+        "13048272",
+        "54561384",
+        "11902109"
+      ],
+      "1173": [
+        "7370282",
+        "12885341",
+        "13778710"
+      ],
+      "1190": [
+        "27768226",
+        "341324",
+        "6561200"
+      ],
+      "1211": [
+        "4928282",
+        "44935041",
+        "13636631"
+      ],
+      "1227": [
+        "25641414",
+        "881332",
+        "7662395"
+      ],
+      "1230": [
+        "13905670",
+        "4418070",
+        "16119973"
+      ],
+      "1231": [
+        "13905670",
+        "5922085",
+        "9244474"
+      ],
+      "1235": [
+        "29381091",
+        "14865329",
+        "20532591"
+      ],
+      "1246": [
+        "49429882",
+        "17450673",
+        "22236223"
+      ],
+      "1260": [
+        "24341590",
+        "13069283",
+        "20454006"
+      ],
+      "1265": [
+        "37480103",
+        "23557241",
+        "13831842"
+      ],
+      "1275": [
+        "4406819",
+        "27731651",
+        "7481159"
+      ],
+      "1276": [
+        "34615397",
+        "3475317",
+        "21258863"
+      ],
+      "1284": [
+        "3578380",
+        "2492146",
+        "32421068"
+      ],
+      "1291": [
+        "56893404",
+        "4886637",
+        "25571386"
+      ],
+      "1295": [
+        "21239672",
+        "4474874",
+        "28264919"
+      ],
+      "1314": [
+        "16237005",
+        "4300851",
+        "36904081"
+      ],
+      "1328": [
+        "34615397",
+        "3475317",
+        "33835579"
+      ],
+      "1333": [
+        "1649738",
+        "42377686",
+        "40323454"
+      ],
+      "1340": [
+        "15482274",
+        "11718220",
+        "18062308"
+      ],
+      "1341": [
+        "15482274",
+        "11718220",
+        "18062308"
+      ],
+      "1342": [
+        "4767806",
+        "8148122",
+        "8759633"
+      ],
+      "1345": [
+        "21557055",
+        "11903247",
+        "9483851"
+      ],
+      "1347": [
+        "19005293",
+        "3835423",
+        "12100963"
+      ],
+      "1350": [
+        "5377642",
+        "14938990",
+        "18938992"
+      ],
+      "1355": [
+        "5256564",
+        "25725663",
+        "10852047"
+      ],
+      "1364": [
+        "1122279",
+        "79447",
+        "27099731"
+      ],
+      "1374": [
+        "21993510",
+        "21623140",
+        "36558211"
+      ],
+      "1376": [
+        "19408393",
+        "3944632",
+        "11117498"
+      ],
+      "1402": [
+        "29877890",
+        "20725212",
+        "30184745"
+      ]
+    }
+  }
+}

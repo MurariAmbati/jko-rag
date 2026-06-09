@@ -1,0 +1,382 @@
+{
+  "best": {
+    "cfg": {
+      "h": 0.2,
+      "lam": 0.005,
+      "rho": 0.05,
+      "sinkhorn_eps": 0.1,
+      "T": 3,
+      "inner_steps": 15,
+      "tau0": 0.1,
+      "alpha": 1.0,
+      "gamma": 0.6,
+      "mode": "wasserstein"
+    },
+    "ndcg@10": 0.47993592097549953,
+    "recall@10": 0.5636671335200746,
+    "n": 60,
+    "elapsed_s": 30.470384120941162
+  },
+  "history": [
+    {
+      "cfg": {
+        "h": 0.1,
+        "lam": 0.005,
+        "rho": 0.05,
+        "sinkhorn_eps": 0.05,
+        "T": 2,
+        "inner_steps": 15,
+        "tau0": 0.05,
+        "alpha": 1.0,
+        "gamma": 0.0,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.43852742309937537,
+      "recall@10": 0.5124089635854341,
+      "n": 60,
+      "elapsed_s": 29.466612577438354
+    },
+    {
+      "cfg": {
+        "h": 2.0,
+        "lam": 0.05,
+        "rho": 0.0,
+        "sinkhorn_eps": 0.05,
+        "T": 1,
+        "inner_steps": 15,
+        "tau0": 0.1,
+        "alpha": 1.0,
+        "gamma": 0.0,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.4520504327762983,
+      "recall@10": 0.5050840336134453,
+      "n": 60,
+      "elapsed_s": 14.739537239074707
+    },
+    {
+      "cfg": {
+        "h": 2.0,
+        "lam": 0.01,
+        "rho": 0.2,
+        "sinkhorn_eps": 0.1,
+        "T": 2,
+        "inner_steps": 25,
+        "tau0": 0.3,
+        "alpha": 0.0,
+        "gamma": 0.3,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.3939536062527326,
+      "recall@10": 0.4682306255835668,
+      "n": 60,
+      "elapsed_s": 49.05521559715271
+    },
+    {
+      "cfg": {
+        "h": 1.0,
+        "lam": 0.03,
+        "rho": 0.05,
+        "sinkhorn_eps": 0.05,
+        "T": 2,
+        "inner_steps": 25,
+        "tau0": 0.05,
+        "alpha": 0.0,
+        "gamma": 1.0,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.40621312254179043,
+      "recall@10": 0.4594887955182073,
+      "n": 60,
+      "elapsed_s": 48.305994510650635
+    },
+    {
+      "cfg": {
+        "h": 0.1,
+        "lam": 0.03,
+        "rho": 0.05,
+        "sinkhorn_eps": 0.2,
+        "T": 3,
+        "inner_steps": 15,
+        "tau0": 1.0,
+        "alpha": 1.0,
+        "gamma": 0.0,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.3377074577090092,
+      "recall@10": 0.3771311858076565,
+      "n": 60,
+      "elapsed_s": 43.90685224533081
+    },
+    {
+      "cfg": {
+        "h": 1.0,
+        "lam": 0.005,
+        "rho": 0.2,
+        "sinkhorn_eps": 0.1,
+        "T": 3,
+        "inner_steps": 40,
+        "tau0": 0.1,
+        "alpha": 0.0,
+        "gamma": 0.0,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.0,
+      "recall@10": 0.0,
+      "n": 0,
+      "elapsed_s": 0.0
+    },
+    {
+      "cfg": {
+        "h": 0.2,
+        "lam": 0.03,
+        "rho": 0.0,
+        "sinkhorn_eps": 0.05,
+        "T": 1,
+        "inner_steps": 25,
+        "tau0": 0.3,
+        "alpha": 0.7,
+        "gamma": 0.6,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.4434992572900812,
+      "recall@10": 0.5281115779645192,
+      "n": 60,
+      "elapsed_s": 24.439018726348877
+    },
+    {
+      "cfg": {
+        "h": 0.2,
+        "lam": 0.03,
+        "rho": 0.05,
+        "sinkhorn_eps": 0.05,
+        "T": 3,
+        "inner_steps": 40,
+        "tau0": 0.05,
+        "alpha": 1.0,
+        "gamma": 0.3,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.4686606013780498,
+      "recall@10": 0.5221311858076564,
+      "n": 60,
+      "elapsed_s": 116.1751000881195
+    },
+    {
+      "cfg": {
+        "h": 2.0,
+        "lam": 0.01,
+        "rho": 0.01,
+        "sinkhorn_eps": 0.1,
+        "T": 5,
+        "inner_steps": 25,
+        "tau0": 0.1,
+        "alpha": 0.4,
+        "gamma": 0.0,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.4407726705152548,
+      "recall@10": 0.5134173669467786,
+      "n": 60,
+      "elapsed_s": 90.7760717868805
+    },
+    {
+      "cfg": {
+        "h": 0.2,
+        "lam": 0.005,
+        "rho": 0.05,
+        "sinkhorn_eps": 0.1,
+        "T": 3,
+        "inner_steps": 15,
+        "tau0": 0.1,
+        "alpha": 1.0,
+        "gamma": 0.6,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.47993592097549953,
+      "recall@10": 0.5636671335200746,
+      "n": 60,
+      "elapsed_s": 30.470384120941162
+    },
+    {
+      "cfg": {
+        "h": 0.2,
+        "lam": 0.05,
+        "rho": 0.1,
+        "sinkhorn_eps": 0.2,
+        "T": 5,
+        "inner_steps": 15,
+        "tau0": 0.3,
+        "alpha": 0.2,
+        "gamma": 0.3,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.40674563295312643,
+      "recall@10": 0.44088935574229693,
+      "n": 60,
+      "elapsed_s": 51.14276623725891
+    },
+    {
+      "cfg": {
+        "h": 2.0,
+        "lam": 0.1,
+        "rho": 0.05,
+        "sinkhorn_eps": 0.2,
+        "T": 5,
+        "inner_steps": 40,
+        "tau0": 1.0,
+        "alpha": 0.4,
+        "gamma": 0.3,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.478170909240309,
+      "recall@10": 0.5368697478991596,
+      "n": 60,
+      "elapsed_s": 130.28952431678772
+    },
+    {
+      "cfg": {
+        "h": 0.2,
+        "lam": 0.1,
+        "rho": 0.1,
+        "sinkhorn_eps": 0.05,
+        "T": 1,
+        "inner_steps": 15,
+        "tau0": 0.1,
+        "alpha": 0.2,
+        "gamma": 1.0,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.4419229220827225,
+      "recall@10": 0.5124253034547153,
+      "n": 60,
+      "elapsed_s": 8.34978175163269
+    },
+    {
+      "cfg": {
+        "h": 2.0,
+        "lam": 0.005,
+        "rho": 0.1,
+        "sinkhorn_eps": 0.1,
+        "T": 5,
+        "inner_steps": 40,
+        "tau0": 0.3,
+        "alpha": 1.0,
+        "gamma": 0.0,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.45592032665377696,
+      "recall@10": 0.5139729225023343,
+      "n": 60,
+      "elapsed_s": 109.60455846786499
+    },
+    {
+      "cfg": {
+        "h": 0.1,
+        "lam": 0.1,
+        "rho": 0.05,
+        "sinkhorn_eps": 0.2,
+        "T": 3,
+        "inner_steps": 15,
+        "tau0": 0.3,
+        "alpha": 0.7,
+        "gamma": 0.3,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.41840543187648577,
+      "recall@10": 0.4607422969187675,
+      "n": 60,
+      "elapsed_s": 25.74616575241089
+    },
+    {
+      "cfg": {
+        "h": 1.0,
+        "lam": 0.005,
+        "rho": 0.05,
+        "sinkhorn_eps": 0.2,
+        "T": 2,
+        "inner_steps": 40,
+        "tau0": 0.05,
+        "alpha": 0.4,
+        "gamma": 0.3,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.46503213525400644,
+      "recall@10": 0.5257586367880485,
+      "n": 60,
+      "elapsed_s": 44.59669494628906
+    },
+    {
+      "cfg": {
+        "h": 0.2,
+        "lam": 0.03,
+        "rho": 0.01,
+        "sinkhorn_eps": 0.2,
+        "T": 1,
+        "inner_steps": 40,
+        "tau0": 0.3,
+        "alpha": 0.7,
+        "gamma": 0.0,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.36550776354597864,
+      "recall@10": 0.4120121381886088,
+      "n": 60,
+      "elapsed_s": 21.6631760597229
+    },
+    {
+      "cfg": {
+        "h": 0.1,
+        "lam": 0.03,
+        "rho": 0.05,
+        "sinkhorn_eps": 0.05,
+        "T": 1,
+        "inner_steps": 15,
+        "tau0": 0.05,
+        "alpha": 0.0,
+        "gamma": 1.0,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.41919739562171093,
+      "recall@10": 0.49698879551820735,
+      "n": 60,
+      "elapsed_s": 8.257677555084229
+    },
+    {
+      "cfg": {
+        "h": 0.1,
+        "lam": 0.1,
+        "rho": 0.01,
+        "sinkhorn_eps": 0.05,
+        "T": 5,
+        "inner_steps": 40,
+        "tau0": 0.1,
+        "alpha": 0.4,
+        "gamma": 1.0,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.4488674175447944,
+      "recall@10": 0.521155462184874,
+      "n": 60,
+      "elapsed_s": 107.31168508529663
+    },
+    {
+      "cfg": {
+        "h": 0.2,
+        "lam": 0.1,
+        "rho": 0.01,
+        "sinkhorn_eps": 0.2,
+        "T": 3,
+        "inner_steps": 25,
+        "tau0": 0.3,
+        "alpha": 0.7,
+        "gamma": 1.0,
+        "mode": "wasserstein"
+      },
+      "ndcg@10": 0.4591072034812715,
+      "recall@10": 0.507703081232493,
+      "n": 60,
+      "elapsed_s": 40.14723062515259
+    }
+  ]
+}

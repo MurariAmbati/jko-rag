@@ -1,0 +1,16 @@
+{
+  "best": {
+    "cfg": {
+      "h": 2.0,
+      "lam": 0.1,
+      "rho": 0.05,
+      "sinkhorn_eps": 0.2,
+      "T": 3,
+      "inner_steps": 20,
+      "tau0": 1.0,
+      "alpha": 0.4,
+      "gamma": 0.3,
+      "mode": "wasserstein"
+    }
+  }
+}
