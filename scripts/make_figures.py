@@ -53,18 +53,22 @@ COLORS = {
 def fig1_stability():
     datasets = ["scifact", "nfcorpus", "trec-covid", "fiqa"]
     labels   = ["SciFact", "NFCorpus", "TREC-COVID", "FiQA"]
+    # SciFact stability lives in stability.json (not stability_scifact.json)
+    stab_file_map = {
+        "scifact":    RESULTS / "stability.json",
+        "nfcorpus":   RESULTS / "stability_nfcorpus.json",
+        "trec-covid": RESULTS / "stability_trec-covid.json",
+        "fiqa":       RESULTS / "stability_fiqa.json",
+    }
     data = {}
     for ds in datasets:
-        p = RESULTS / f"stability_{ds}.json"
+        p = stab_file_map[ds]
         if not p.exists():
+            print(f"  [fig1] missing {p}; skipping {ds}")
             continue
         with open(p) as f:
             obj = json.load(f)
-        # obj is list of dicts or dict — handle both shapes
-        if isinstance(obj, list):
-            d = {r["method"]: r["mean_wc"] for r in obj}
-        else:
-            d = obj.get("per_method", obj)
+        d = obj.get("per_method_mean_over_perturbations", {})
         data[ds] = d
 
     if not data:
