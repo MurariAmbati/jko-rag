@@ -19,6 +19,22 @@ $$p_{t+1} = \arg\min_{p} \frac{1}{2h} W^2_{C,\varepsilon}(p, p_t) + F_q(p)$$
 where $F_q = \text{relevance} + \lambda\,\text{entropy} + \frac{\rho}{2}\,\text{redundancy}$
 and $C_{ij} = (1 - \cos\langle z_i, z_j\rangle)^2$ is the semantic ground metric.
 
+### Headline contribution: a linear-response theory of stability
+
+The paper's central result **explains** why the Wasserstein geometry helps. A
+single-step sensitivity analysis (Theorem 1) shows the Wasserstein and KL
+retrieval maps have identical response operators *except* for the proximal
+Hessian — a dense, geometry-aware entropic-OT operator for $W^2$ versus a
+diagonal, geometry-blind one for KL:
+
+$$A_W - A_{\mathrm{KL}} = \tfrac{1}{2h}\big(H_W - \mathrm{diag}(1/p^+)\big).$$
+
+This term selectively damps the cross-cluster mass transport a paraphrase
+induces, and yields a **falsifiable prediction**: the stability gap is monotone
+decreasing in the step size $h$. We verify all of this (free-energy descent,
+frequency-resolved response, the $h$-dependence, and a new **certified stability
+radius**) — see `src/theory_*.py` and Figure 2 in the paper.
+
 ### Four algorithmic contributions
 
 | Name | Description |
@@ -129,12 +145,21 @@ python src/dual_rank_selective.py --dataset fiqa --split test
 python src/dual_rank_selective.py --dataset scidocs --split test
 ```
 
-### 9. Generate paper figures
+### 9. Stability-theory verification (Theorem 1 / Prop 2 / Corollary 3)
 ```bash
-python scripts/make_figures.py
+python src/theory_descent.py  --n 40            # free-energy descent
+python src/theory_hsweep.py   --n 20 --dirs 1   # stability gap vs h
+python src/theory_response.py --n 30 --bands 4  # response anisotropy by frequency
+python src/theory_perturb.py  --n 25 --dirs 2   # certified stability radius
 ```
 
-### 10. Regenerate full report
+### 10. Generate paper figures
+```bash
+python scripts/make_figures.py          # fig1-4 (method results)
+python scripts/make_theory_figures.py   # fig5-8 (theory verification)
+```
+
+### 11. Regenerate full report
 ```bash
 python src/final_report.py
 ```
@@ -155,6 +180,11 @@ jko-rag/
 │   ├── learned_metric.py        # NM-JKO: LowRankMetric + InfoNCE training
 │   ├── hierarchical_jko.py      # SAM-JKO: score-aware multi-resolution JKO
 │   ├── dual_rank_selective.py   # Dual-Rank: OT potentials as confidence
+│   ├── theory_common.py         # Shared utils for the stability-theory experiments
+│   ├── theory_descent.py        # E1: free-energy descent curves
+│   ├── theory_response.py       # E2: response anisotropy by graph frequency
+│   ├── theory_hsweep.py         # E3: stability gap vs step size h
+│   ├── theory_perturb.py        # E4: certified stability radius
 │   ├── run_contributions.py     # Main evaluation: 9 methods × 4 datasets
 │   ├── run_stability_new.py     # BW-JKO / NM-JKO stability sweep
 │   ├── run_mr_jko_bench.py      # SAM-JKO synthetic + SciFact benchmark

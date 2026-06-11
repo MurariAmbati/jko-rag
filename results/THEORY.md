@@ -52,6 +52,41 @@ This has direct consequences:
 - **Distractor resistance**. When a "near-neighbour-but-wrong" chunk is injected with high relevance score, KL moves mass to it freely. W² makes it competitive with the genuinely relevant chunk *only if* they're in the same cluster — which is exactly what we want, since distractors that are semantically close to gold often *should* be considered, while distractors in unrelated clusters shouldn't be.
 - **Decisive empirical test (this work, ablation matrix)**. Replacing C with the identity-on-off-diagonal matrix `C_ij = 1[i ≠ j]` collapses W² to a KL-like multiplicative update — and empirically, identity-C exactly matches KL-prox at 0.713 nDCG@10 on SciFact test. **The semantic geometry is operative.**
 
+## 3b. A linear-response theory of stability (the formal mechanism)
+
+Section 3 *asserts* that "KL freely transports mass, W² penalises it". The
+paper now makes this a theorem via a sensitivity analysis of one JKO step. The
+full derivation is in `THEORY_stability.md`; the result:
+
+**Theorem (linear-response decomposition).** Let `p⁺` minimise one JKO step for
+energy `E`. The first-order response to `E → E+δE` is `δp = -R_D δE`, where `R_D`
+is the tangent-space inverse of
+
+    A_D = lam·diag(1/p⁺) + rho·K + (1/2h)·H_D,
+
+and `H_D` is the proximal Hessian. The two proximals give
+`H_KL = diag(1/p⁺)` (diagonal, geometry-blind) and
+`H_W = grad²_p OT_eps(p⁺,q)` (dense, geometry-aware). The response operators
+differ **only** in this term:
+
+    A_W - A_KL = (1/2h)·( H_W - diag(1/p⁺) ).
+
+**Proposition (curvature).** `vᵀH_W v` is the curvature of entropic transport
+cost along `v`: small for intra-cluster (low Gibbs-Laplacian frequency) modes,
+large for cross-cluster (high frequency) modes.
+
+**Corollary (h-dependence).** For cross-cluster perturbations
+`‖δp_W‖ ≤ ‖δp_KL‖`, and the gap is governed by `(1/2h)(H_W - diag)`: it vanishes
+as `h → ∞` (tuned regime, tied nDCG) and is maximal as `h → 0` (base regime, the
+22–38% stability advantage). Hence the **stability gap is monotone-decreasing in
+h** — a falsifiable prediction verified in `theory_hsweep.json` / Fig. 7.
+
+This is verified by four experiments (`src/theory_*.py`):
+`theory_descent` (free-energy descent), `theory_response` (frequency-band
+response anisotropy → Prop.), `theory_hsweep` (gap vs h → Corollary), and
+`theory_perturb` (certified stability radius — a new evaluation axis for
+retrieval, analogous to certified radii in classification).
+
 ## 4. Convergence properties
 
 The JKO scheme (3) under the *exact* OT cost is known to have:
