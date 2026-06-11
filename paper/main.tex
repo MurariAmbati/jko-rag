@@ -72,7 +72,7 @@ We further introduce four extensions: \textbf{\nmjko} (learned low-rank ground m
 
 Retrieval-augmented generation (RAG)~\cite{lewis2020rag} pipelines retrieve a candidate set, rerank it, and feed the top-$k$ passages to a language model. The reranking step is typically a \emph{cross-encoder score} applied independently to each passage~\cite{nogueira2019mono}, which treats the retrieval problem as $M$ independent binary relevance judgements. This ignores two fundamental structure properties of the downstream consumer: (i) the language model processes the \emph{joint} context of all retrieved passages, so the \emph{set} matters, not just individual scores; (ii) the embedding space carries a \emph{geometric} structure --- near-duplicate passages should not both be retrieved even if they individually score well.
 
-Existing diversity-aware methods --- Maximal Marginal Relevance (MMR)~\cite{carbonell1998mmr} and Determinantal Point Processes (DPP)~\cite{chen2022dpp} --- address one or both of these issues. MMR is a greedy one-shot heuristic with no convergence guarantees; DPP solves a one-shot selection problem but has no iterative refinement.
+Existing diversity-aware methods --- Maximal Marginal Relevance (MMR)~\cite{carbonell1998mmr} and Determinantal Point Processes (DPP)~\cite{chen2018dpp} --- address one or both of these issues. MMR is a greedy one-shot heuristic with no convergence guarantees; DPP solves a one-shot selection problem but has no iterative refinement.
 
 We propose a different primitive: retrieval as \emph{distributional gradient flow}. Let $p\in\Delta^{M-1}$ be a probability distribution over the $M$-document candidate pool. We define a free-energy functional $F_q(p)$ encoding relevance, entropy, and redundancy, and iterate the JKO scheme
 \begin{equation}
@@ -233,7 +233,7 @@ The Sinkhorn solver for $\Wdist^2(p_T, \cdot)$ computes dual potentials $f, g$ s
 
 \subsection{Datasets and baselines}
 
-We evaluate on five BEIR~\cite{thakur2021beir} datasets (\Cref{tab:datasets}). Baselines: \textbf{BM25}, \textbf{Dense}, \textbf{Hybrid-RRF}~\cite{rrf2009}, \textbf{Cross-Enc} (cross-encoder re-ranker), \textbf{MMR}~\cite{carbonell1998mmr}, \textbf{DPP-MAP}~\cite{chen2022dpp}, \textbf{Iter-RetGen}~\cite{shao2023iter}, and \textbf{KL-Prox} (mirror-descent analogue of JKO). All numbers are per-query means with 95\% bootstrap CIs ($n{=}2000$).
+We evaluate on five BEIR~\cite{thakur2021beir} datasets (\Cref{tab:datasets}). Baselines: \textbf{BM25}, \textbf{Dense}, \textbf{Hybrid-RRF}~\cite{rrf2009}, \textbf{Cross-Enc} (cross-encoder re-ranker), \textbf{MMR}~\cite{carbonell1998mmr}, \textbf{DPP-MAP}~\cite{chen2018dpp}, \textbf{Iter-RetGen}~\cite{shao2023iter}, and \textbf{KL-Prox} (mirror-descent analogue of JKO). All numbers are per-query means with 95\% bootstrap CIs ($n{=}2000$).
 
 \begin{table}[h]
 \centering\small
@@ -243,7 +243,7 @@ We evaluate on five BEIR~\cite{thakur2021beir} datasets (\Cref{tab:datasets}). B
 \toprule
 Dataset & Domain & Docs & Test queries & Rel/q \\
 \midrule
-SciFact~\cite{wangscifact2020}  & Sci.\ claims & 5{,}183 & 300 & 1.1 \\
+SciFact~\cite{wadden2020scifact}  & Sci.\ claims & 5{,}183 & 300 & 1.1 \\
 NFCorpus & Biomedical & 3{,}633 & 323 & 38.2 \\
 TREC-COVID & Bio.\ IR (TREC) & 171{,}332 & 50 & 493.5 \\
 FiQA-2018 & Financial QA & 57{,}638 & 648 & 2.6 \\
@@ -280,6 +280,9 @@ KL-Prox     & 0.712 & 0.357 & 0.717 & \textbf{0.413}$^\ddagger$ & \textbf{0.197}
 \bottomrule
 \end{tabular}
 \end{table}
+
+\paragraph{Positioning against the BEIR landscape.}
+Our absolute nDCG is bounded by the small (22M-parameter) MiniLM backbone and is \emph{not} state-of-the-art: large-model systems score substantially higher on these datasets. On SciFact, supervised E5-large reaches $0.726$~\cite{wang2023e5} and the 3B-parameter monoT5 reranker $0.777$~\cite{rosa2022monot5}, versus our $0.713$; on TREC-COVID, strong cross-encoder rerankers reach $0.82$--$0.85$~\cite{rosa2022monot5} versus our $0.725$; on FiQA, monoT5-3B reaches $0.514$ versus our $0.411$. \jko\ is deliberately \emph{not} a competitor to these models --- it is a backbone-agnostic \emph{framework} that composes on top of any first-stage retriever and reranker (we use MiniLM for CPU-only reproducibility). The contribution is the distributional geometry and the stability theory it enables, both orthogonal to backbone scale: substituting a larger encoder would lift every row of \Cref{tab:main} while leaving the $W^2$-vs-KL analysis of \S\ref{sec:theory} unchanged.
 
 \subsection{Verifying the stability theory}
 \label{sec:verify}
@@ -470,7 +473,7 @@ Word Mover's Distance~\cite{kusner2015wmd} applies OT between \emph{word embeddi
 The JKO scheme~\cite{jko1998} and its modern metric-space treatment~\cite{ambrosio2008gradient,santambrogio2017euclidean} underpin a large literature on sampling and generative modelling. Our contribution is not the scheme itself but (i) its transplantation to the finite retrieval simplex with a \emph{semantic} ground metric, and (ii) the linear-response analysis (\S\ref{sec:theory}) that turns the abstract ``Wasserstein is geometry-aware'' intuition into a verifiable, $h$-dependent prediction. The proximal-Hessian decomposition~\eqref{eq:diff} relies on differentiability of entropic OT~\cite{luise2018differential,eisenberger2022unified,genevay2019}.
 
 \paragraph{Distributional and diversity-aware retrieval.}
-MMR~\cite{carbonell1998mmr} is the canonical diversity-aware greedy method; DPP-MAP~\cite{chen2022dpp} is the principled one-shot alternative. Both are non-iterative. KL-proximal mirror descent~\cite{beck2003mirror} is the information-theoretic analog of our method; our ablation and \Cref{thm:response} together separate the geometric contribution of the Wasserstein cost from the iterative refinement.
+MMR~\cite{carbonell1998mmr} is the canonical diversity-aware greedy method; DPP-MAP~\cite{chen2018dpp} is the principled one-shot alternative. Both are non-iterative. KL-proximal mirror descent~\cite{beck2003mirror} is the information-theoretic analog of our method; our ablation and \Cref{thm:response} together separate the geometric contribution of the Wasserstein cost from the iterative refinement.
 
 \paragraph{Certified robustness.}
 Certified radii are well studied for classifiers, \eg\ via randomized smoothing~\cite{cohen2019certified}. \Cref{sec:verify} ports the idea to retrieval: the largest energy perturbation that provably preserves the top-$k$ set. We are not aware of prior certified-robustness notions for neural rerankers.
